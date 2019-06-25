@@ -1,66 +1,334 @@
-@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
-@import "reset";
+@import "vars";
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  // background: purple;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+a {
+  text-decoration: none;
+  color: $off-white;
+  &:hover {
+    color: $main-color;
+  }
 }
 
-h1 {
-  font-weight: 100;
-  font-size: 50px;
+ul {
+  list-style: none;
 }
-
-.home {
-  height: 100%;
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+img {
   width: 100%;
+}
+// GLOBAL
+.container {
+  max-width: $website-width;
+  padding: 1.5rem;
+  margin: auto;
+  // overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.text-center {
   text-align: center;
-
-  img {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+}
+//Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
   }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
 
-  .Aligner {
-    min-height: 100vh;
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 6rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+// Margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  color: $main-color;
+  font-family: "Bangers", cursive;
+}
+// Nav BG
+.nav-bg {
+  background: $title-nav-color;
+  width: 100%;
+}
+// Main Nav
+#main-nav {
+  //   background: black;
+  display: flex;
+  justify-content: space-between;
+  ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .Aligner-item {
-    max-width: 50%;
-  }
-
-  .menu {
-    ul {
-      li {
-        padding: 10px 15px;
-        display: inline-block;
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        font-weight: 500;
+    li {
+      padding: 1rem 1.5rem;
+      a {
+        color: $off-white;
+        &:hover {
+          color: $main-color;
+        }
       }
     }
   }
+}
 
-  .version-num {
-    background: #E8E8E8;
-    border-radius: 4px;
-    padding: 7px 15px;
-    display: inline-block;
-    font-size: 12px;
-    margin: 10px 0 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: #30395C;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      color: #43D4D6;
+// Header
+.header {
+  &-home {
+    background: $top-img no-repeat top center / cover;
+    height: 100vh;
+    // color: $off-white;
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
     }
   }
 }
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+// Buttons
+.btn-light {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  color: $off-white;
+  background: $main-color;
+  &:hover {
+    color: $main-color;
+    background: $title-nav-color;
+  }
+}
+.boxBtn {
+  margin-top: 20px;
+}
+.btn-dark {
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  color: $title-nav-color;
+  background: $off-white;
+  &:hover {
+    color: $off-white;
+    background: $title-nav-color;
+  }
+}
+
+// Home Section
+#home {
+  padding: 100px 0 50px 0;
+  .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    .fas {
+      color: $main-color;
+      padding-bottom: 0.9rem;
+    }
+  }
+}
+#about {
+  // About A
+  &-a {
+    padding-top: 50px;
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "aw1 aw2 aw3";
+      grid-gap: 1.2rem;
+    }
+  }
+}
+
+// Items
+#work-a {
+  padding: 50px 0 100px 0;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  position: relative;
+  background: $main-color;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: inherit;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  // Bring in main color overlay
+  &:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+  }
+
+  // Scale image on hover
+  &:hover &-image {
+    transform: scale(1.2);
+  }
+
+  // Bring in text on hover
+  &:hover &-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &-image {
+    height: auto;
+    transform: translateZ(0);
+    display: block;
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  }
+
+  &-image:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+    overflow: hidden;
+  }
+
+  &-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+  }
+
+  &-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    transform: translateY(-20%);
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition-delay: 300ms;
+  }
+
+  &-text-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-text-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 5px 0 0 0;
+  }
+
+  &-text-category {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin: 0;
+  }
+}
+
+// Footer
+#main-footer {
+  background: $title-nav-color;
+  color: $off-white;
+  height: 5.5rem;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    .social .fab,
+    .social .fas {
+      margin-right: 1rem;
+      border: 2px $off-white solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+      &:hover {
+        background: $main-color;
+        color: $off-white;
+      }
+    }
+  }
+}
+
+@import "media";

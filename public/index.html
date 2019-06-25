@@ -1,15 +1,205 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/main.css">
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    <script src="https://kit.fontawesome.com/70643d575b.js"></script>
+    <title>Eduardo Orozco | Front-End Web Developer</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script src="/js/components/vendor.js"></script>
-    <script src="/js/components/firstComp.js"></script>
+    <div class="nav-bg">
+      <div class="container">
+              <nav id="main-nav">
+                <h1 id="logo">EDDTHEDEV!</h1>
+                <ul>
+                  <li><a href="#header-home">Home</a></li>
+                  <li><a href="#home">About</a></li>
+                  <li><a href="#work-a">Projects</a></li>
+                  <li><a href="#main-footer">Contact</a></li>
+                </ul>
+              </nav>
+              </div>
+          </div>
+  <header class="header-home">
+    <div class="container">
+      <div class="header-content">
+          <h1>I Am Eddie The <span
+              class="txt-type myName"
+              data-wait="3000"
+              data-words='["Front-end Dev", "UI/UX Designer"]'
+            ></span></span></h1>
+          <p class="lead">
+              I specialize in creating fun and interactive websites.
+          </p>
+              <a href="#work-a" class="btn-light">View My Work</a>
+      </div>
+    </div>
+  </header>
+  <!-- About section -->
+  <section id="home" class="text-center py-3">
+      <div class="container">
+          <h2 class="section-title">
+              About
+          </h2>
+          <div class="bottom-line"></div>
+          <div class="specials">
+              <div>
+                  <i class="fas fa-code fa-2x"></i> 
+                  <h3>Development</h3>
+                  <p>My HTML, CSS and JavaScript skills can make websites come to life</p>
+              </div>
+              <div>
+                  <i class="fas fa-mobile-alt fa-2x"></i> 
+                  <h3>Responsive</h3>
+                  <p>Specialize in making websites responsive on any device</p>
+              </div>
+              <div>
+                  <i class="fas fa-paint-roller fa-2x"></i> 
+                  <h3>Creative</h3>
+                  <p>Enjoy creating fun UI/UX experiences that anyone can use</p>
+              </div>
+              <div>
+                  <i class="fas fa-car fa-2x"></i> 
+                  <h3>Driven</h3>
+                  <p>Highly motivated and determined to keep projects on task</p>
+              </div>
+          </div>
+      </div>
+      <div id="about-a" class="text-center ">
+          <div class="container">    
+              <div class="about-info">
+                  <div class="bio bg-light">
+                      <h2>Who Am I?</h2>
+                      <p>
+                      Hi! My name is Eduardo Orozco, Chicago native and front-end developer. My current stack consist of HTML5, CSS3 (SASS), and JavaScript / jQuery. I am currently sharpening up my React.js and WordPress skills to become a well-rounded web developer.  
+                  </p>
+              </div>  
+            </div>
+          </div>
+      </div>
+  </section>
+  <section id="work-a" class="text-center">
+          <div class="container">
+            <h2 class="section-title">Work</h2>
+            <div class="bottom-line"></div>
+            <p class="lead">
+              Check out my projects
+            </p>
+            <div class="items">
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/beard-dude.jpeg" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                    <h2 class="item-text-title">Joe's Barber Shop</h2>
+                    <p class="item-text-category">HTML5/CSS3/BOOTSTRAP/JAVASCRIPT</p>
+                    <div class="boxBtn">
+                          <a href="https://joesbarbershop.herokuapp.com/" target="_blank" class="btn-dark">View Project</a>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/bike-stacked.jpeg" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                    <h2 class="item-text-title">Mike's Bike's</h2>
+                    <p class="item-text-category">HTML5/SASS/JAVASCRIPT</p>
+                    <div class="boxBtn">
+                          <a href="https://mikesbikes.herokuapp.com/" target="_blank" class="btn-dark">View Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/code4.jpeg" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                    <h2 class="item-text-title">Tech Company</h2>
+                    <p class="item-text-category">HTML/SASS/JAVASCRIPT</p>
+                    <div class="boxBtn">
+                          <a href="https://teckco.herokuapp.com/" target="_blank" class="btn-dark">View Project</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/audi.jpeg" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                      <h2 class="item-text-title">Audi Concept</h2>
+                      <p class="item-text-category">Comming Soon!</p>
+                      <div class="boxBtn">
+                              <a href="#" class="btn-dark">View Project</a>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/item5.png" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                          <h2 class="item-text-title">HTML EMAILS</h2>
+                          <p class="item-text-category">Comming Soon!</p>
+                          <div class="boxBtn">
+                                  <a href="#" class="btn-dark">View Project</a>
+                            </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-image">
+                  <img src="img/items/web3.jpeg" alt="" />
+                </div>
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                          <h2 class="item-text-title">REACT PAGE</h2>
+                          <p class="item-text-category">Comming Soon!</p>
+                          <div class="boxBtn">
+                                  <a href="#" class="btn-dark">View Project</a>
+                            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+ 
+  <!-- Footer -->
+  <footer id="main-footer">
+      <div class="footer-content container" >
+          <p>Copyright &copy; 2019. All Rights Reserved</p>
+          <div class="social">
+              <a href="https://github.com/eddthedev?tab=overview&from=2018-01-01&to=2018-01-31" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/eduardo-orozco-969576171/" target="_blank" ><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:orozcoeduardo231@gmail.com" ><i class="fas fa-envelope"></i></a>
+          </div>
+      </div>
+  </footer>
+  <script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
   </body>
 </html>
